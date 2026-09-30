@@ -246,21 +246,23 @@
   }
 
   .letter-glow-light .letter-glow-character:hover {
-    color: color-mix(in oklch, currentColor 82%, var(--hero-foreground) 18%);
-    filter: brightness(1.16) contrast(1.06);
+    color: color-mix(in oklch, currentColor 68%, var(--hero-foreground) 32%);
+    filter: brightness(1.24) contrast(1.08);
     text-shadow:
-      0 0 0.45px var(--hero-foreground),
-      0 0 1.25px color-mix(in oklch, var(--hero-foreground) 88%, transparent),
-      0 1px 2.5px color-mix(in oklch, var(--accent-soft) 30%, transparent);
+      0 0 0.4px var(--hero-foreground),
+      0 0 1px color-mix(in oklch, var(--hero-foreground) 96%, transparent),
+      0 0 2.25px color-mix(in oklch, var(--hero-foreground) 72%, transparent),
+      0 1px 3px color-mix(in oklch, var(--accent-soft) 36%, transparent);
   }
 
   .letter-glow-dark .letter-glow-character:hover {
-    color: color-mix(in oklch, currentColor 94%, var(--paper) 6%);
-    filter: brightness(1.03) contrast(1.13);
+    color: color-mix(in oklch, currentColor 97%, var(--paper) 3%);
+    filter: brightness(1.045) contrast(1.16);
     text-shadow:
-      -0.55px -0.45px 0 color-mix(in oklch, var(--paper) 24%, transparent),
-      0.5px 0.65px 0 color-mix(in oklch, var(--ink-muted) 22%, transparent),
-      0 0 0.7px color-mix(in oklch, var(--hero-muted) 18%, transparent);
+      -0.65px -0.5px 0 color-mix(in oklch, var(--paper) 42%, transparent),
+      0.55px 0.7px 0 color-mix(in oklch, var(--ink-muted) 30%, transparent),
+      0 0 1.15px color-mix(in oklch, var(--hero-muted) 30%, transparent),
+      0 1px 2px color-mix(in oklch, var(--ink-muted) 16%, transparent);
   }
 
   .letter-glow-red .letter-glow-character:hover {
@@ -273,16 +275,17 @@
   }
 
   .letter-glow-hero.letter-glow-light .letter-glow-character:hover {
-    filter: brightness(1.22) contrast(1.08);
+    filter: brightness(1.3) contrast(1.1);
     text-shadow:
-      0 0 0.5px var(--hero-foreground),
-      0 0 1.5px color-mix(in oklch, var(--hero-foreground) 92%, transparent),
-      0 1px 3px color-mix(in oklch, var(--accent-soft) 34%, transparent);
+      0 0 0.4px var(--hero-foreground),
+      0 0 1.15px color-mix(in oklch, var(--hero-foreground) 98%, transparent),
+      0 0 2.6px color-mix(in oklch, var(--hero-foreground) 76%, transparent),
+      0 1px 3.4px color-mix(in oklch, var(--accent-soft) 40%, transparent);
     transform: translateY(-8px) scale(1.015);
   }
 
   .letter-glow-hero.letter-glow-dark .letter-glow-character:hover {
-    filter: brightness(1.04) contrast(1.15);
+    filter: brightness(1.055) contrast(1.18);
     transform: translateY(-8px) scale(1.015);
   }
 
@@ -293,6 +296,14 @@
       0 0 3px currentColor,
       0 2px 5px color-mix(in oklch, var(--color-accent) 68%, transparent);
     transform: translateY(-8px) scale(1.015);
+  }
+
+  .red-button-glow:hover {
+    filter: brightness(1.08) contrast(1.03);
+    box-shadow:
+      0 0 1px var(--color-accent),
+      0 0 5px color-mix(in oklch, var(--color-accent) 58%, transparent),
+      0 2px 8px color-mix(in oklch, var(--color-accent) 28%, transparent);
   }
 }
 
