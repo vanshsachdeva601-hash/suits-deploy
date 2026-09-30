@@ -13,3 +13,4 @@
 
 - Keep the club experience as one semantic, anchor-navigated home route because the requested flow is intentionally one continuous editorial campaign.
 - Keep motion dependency-free with CSS and IntersectionObserver to protect performance on student laptops and mobile devices.
+- Keep heading micro-interactions character-scoped with CSS and precise-pointer media queries so typography stays stable and touch layouts remain unchanged.
