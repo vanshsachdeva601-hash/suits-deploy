@@ -242,16 +242,51 @@
 
 @media (hover: hover) and (pointer: fine) {
   .letter-glow-character:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+
+  .letter-glow-light .letter-glow-character:hover {
+    color: color-mix(in oklch, currentColor 82%, var(--hero-foreground) 18%);
+    filter: brightness(1.16) contrast(1.06);
+    text-shadow:
+      0 0 0.45px var(--hero-foreground),
+      0 0 1.25px color-mix(in oklch, var(--hero-foreground) 88%, transparent),
+      0 1px 2.5px color-mix(in oklch, var(--accent-soft) 30%, transparent);
+  }
+
+  .letter-glow-dark .letter-glow-character:hover {
+    color: color-mix(in oklch, currentColor 94%, var(--paper) 6%);
+    filter: brightness(1.03) contrast(1.13);
+    text-shadow:
+      -0.55px -0.45px 0 color-mix(in oklch, var(--paper) 24%, transparent),
+      0.5px 0.65px 0 color-mix(in oklch, var(--ink-muted) 22%, transparent),
+      0 0 0.7px color-mix(in oklch, var(--hero-muted) 18%, transparent);
+  }
+
+  .letter-glow-red .letter-glow-character:hover {
     color: color-mix(in oklch, currentColor 86%, white 14%);
     filter: brightness(1.2) contrast(1.08);
     text-shadow:
       0 0 1px currentColor,
       0 0 3px currentColor,
       0 2px 4px color-mix(in oklch, var(--color-accent) 58%, transparent);
-    transform: translateY(-4px) scale(1.01);
   }
 
-  .letter-glow-hero .letter-glow-character:hover {
+  .letter-glow-hero.letter-glow-light .letter-glow-character:hover {
+    filter: brightness(1.22) contrast(1.08);
+    text-shadow:
+      0 0 0.5px var(--hero-foreground),
+      0 0 1.5px color-mix(in oklch, var(--hero-foreground) 92%, transparent),
+      0 1px 3px color-mix(in oklch, var(--accent-soft) 34%, transparent);
+    transform: translateY(-8px) scale(1.015);
+  }
+
+  .letter-glow-hero.letter-glow-dark .letter-glow-character:hover {
+    filter: brightness(1.04) contrast(1.15);
+    transform: translateY(-8px) scale(1.015);
+  }
+
+  .letter-glow-hero.letter-glow-red .letter-glow-character:hover {
     filter: brightness(1.28) contrast(1.1);
     text-shadow:
       0 0 1px currentColor,

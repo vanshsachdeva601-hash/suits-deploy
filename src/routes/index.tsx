@@ -146,9 +146,9 @@ function DevOpsClub() {
               Engineering brief / 001
             </div>
             <h1 className="hero-title font-display font-semibold uppercase" aria-label="DevOps With Precision.">
-              <span><GlowText text="DevOps" hero /></span>
-              <span><GlowText text="With" hero /></span>
-              <span className="text-accent"><GlowText text="Precision." hero /></span>
+              <span><GlowText text="DevOps" hero material="light" /></span>
+              <span><GlowText text="With" hero material="light" /></span>
+              <span className="text-accent"><GlowText text="Precision." hero material="red" /></span>
             </h1>
           </div>
           <div className="border-l border-hero-line pl-6 lg:col-span-4 lg:mb-3 lg:pl-8">
@@ -171,7 +171,7 @@ function DevOpsClub() {
           <SectionLabel number="02" text="About the club" />
           <div className="mt-16 grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-7">
-              <h2 className="section-title font-display uppercase" aria-label="The Club."><GlowText text="The" /><br /><GlowText text="Club" /><span className="text-accent"><GlowText text="." /></span></h2>
+              <h2 className="section-title font-display uppercase" aria-label="The Club."><GlowText text="The" material="dark" /><br /><GlowText text="Club" material="dark" /><span className="text-accent"><GlowText text="." material="red" /></span></h2>
             </div>
             <div className="flex flex-col justify-between border-l border-paper-line pl-6 lg:col-span-5 lg:pl-10">
               <p className="font-display text-2xl font-semibold uppercase leading-tight md:text-3xl">Engineering.<br />Automation.<br />Execution.</p>
@@ -191,7 +191,7 @@ function DevOpsClub() {
         <div className="page-shell" data-reveal>
           <SectionLabel number="03" text="Practice areas" />
           <div className="mt-14 grid gap-8 border-b border-border pb-10 md:grid-cols-2 md:items-end">
-            <h2 className="section-title font-display uppercase" aria-label="What We Build."><GlowText text="What We" /><br /><GlowText text="Build" /><span className="text-accent"><GlowText text="." /></span></h2>
+            <h2 className="section-title font-display uppercase" aria-label="What We Build."><GlowText text="What We" material="light" /><br /><GlowText text="Build" material="light" /><span className="text-accent"><GlowText text="." material="red" /></span></h2>
             <p className="max-w-md justify-self-end text-sm leading-7 text-muted-foreground">Four disciplines. One operating principle: build systems that remain clear under pressure.</p>
           </div>
           <div className="case-list">
@@ -211,7 +211,7 @@ function DevOpsClub() {
         <div className="page-shell" data-reveal>
           <SectionLabel number="04" text="Leadership directory" />
           <div className="mt-14 grid gap-8 md:grid-cols-2 md:items-end">
-            <h2 className="section-title font-display uppercase" aria-label="The Team."><GlowText text="The Team" /><span className="text-accent"><GlowText text="." /></span></h2>
+            <h2 className="section-title font-display uppercase" aria-label="The Team."><GlowText text="The Team" material="dark" /><span className="text-accent"><GlowText text="." material="red" /></span></h2>
             <p className="font-display text-2xl font-semibold uppercase md:justify-self-end md:text-right">The people<br />behind the system.</p>
           </div>
           <div className="mt-16 grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
@@ -241,7 +241,7 @@ function DevOpsClub() {
           <SectionLabel number="05" text="Operating principles" />
           <div className="mt-14 grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
-              <h2 className="section-title font-display uppercase" aria-label="How We Work."><GlowText text="How We" /><br /><GlowText text="Work" /><span className="text-accent"><GlowText text="." /></span></h2>
+              <h2 className="section-title font-display uppercase" aria-label="How We Work."><GlowText text="How We" material="light" /><br /><GlowText text="Work" material="light" /><span className="text-accent"><GlowText text="." material="red" /></span></h2>
             </div>
             <div className="lg:col-span-7">
               {principles.map((principle) => (
@@ -261,7 +261,7 @@ function DevOpsClub() {
         <div className="page-shell relative" data-reveal>
           <SectionLabel number="06" text="The next deployment" inverted />
           <div className="mt-16 grid gap-12 lg:grid-cols-12 lg:items-end">
-            <h2 className="cta-title font-display font-semibold uppercase lg:col-span-8" aria-label="Ready to build something that lasts?"><GlowText text="Ready to build something that lasts?" /></h2>
+            <h2 className="cta-title font-display font-semibold uppercase lg:col-span-8" aria-label="Ready to build something that lasts?"><GlowText text="Ready to build something that lasts?" material="light" /></h2>
             <div className="lg:col-span-4">
               <p className="max-w-sm text-sm leading-7 text-accent-soft">Join the people who care about how software gets shipped.</p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -306,9 +306,11 @@ function DevOpsClub() {
   );
 }
 
-function GlowText({ text, hero = false }: { text: string; hero?: boolean }) {
+type GlowMaterial = "light" | "dark" | "red";
+
+function GlowText({ text, hero = false, material }: { text: string; hero?: boolean; material: GlowMaterial }) {
   return (
-    <span className={hero ? "letter-glow letter-glow-hero" : "letter-glow"} aria-hidden="true">
+    <span className={`letter-glow letter-glow-${material}${hero ? " letter-glow-hero" : ""}`} aria-hidden="true">
       {text.split(/(\s+)/).map((part, partIndex) =>
         /\s+/.test(part) ? (
           part
