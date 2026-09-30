@@ -155,7 +155,7 @@ function DevOpsClub() {
             <p className="font-display text-2xl font-medium uppercase">Build. Automate. Deploy.</p>
             <p className="mt-5 max-w-sm text-sm leading-7 text-hero-muted">Where engineering discipline meets the confidence to ship.</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild className="h-12 rounded-none bg-accent px-6 text-xs font-bold uppercase tracking-[0.14em] text-accent-foreground shadow-none hover:-translate-y-0.5 hover:bg-accent/90">
+              <Button asChild className="red-button-glow h-12 rounded-none bg-accent px-6 text-xs font-bold uppercase tracking-[0.14em] text-accent-foreground shadow-none hover:-translate-y-0.5 hover:bg-accent/90">
                 <a href="#about">Meet the club <ArrowUpRight /></a>
               </Button>
               <Button asChild variant="outline" className="h-12 rounded-none border-hero-line bg-transparent px-6 text-xs font-bold uppercase tracking-[0.14em] text-hero-foreground shadow-none hover:-translate-y-0.5 hover:bg-hero-line hover:text-hero-foreground">
