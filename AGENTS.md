@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Project architecture
+
+- Keep the club experience as one semantic, anchor-navigated home route because the requested flow is intentionally one continuous editorial campaign.
+- Keep motion dependency-free with CSS and IntersectionObserver to protect performance on student laptops and mobile devices.
